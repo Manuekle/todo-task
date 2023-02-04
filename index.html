@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Tareas</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block">
+        <div class="content">
+          <div class="date">
+            <section id="date">
+                <h1 id="day"></h1>
+                <span>
+                    <h2 id="month"></h2>
+                    <h3 id="year"></h3>
+                </span>
+            </section>
+            <span id="week"></span>
+          </div>
+          <form class="task" onsubmit="addNewTask(event)" >
+            <input name="textTask" type="text" id="textTask" placeholder="Nueva tarea" />
+            <button type="submit" id="add">
+                <img src="svg/add.svg" alt="add" />
+            </button>
+            <button type="button" onclick="orderTasks()" id="order">Ordenar</button>
+          </form>
+          <div class="tasks" id="taskContent">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/index.js"></script>
+</html>
